@@ -5,17 +5,17 @@
 	id="WebApp_ID" version="2.5">
 	<display-name>HANA-ScriptView-Demo</display-name>
 	<welcome-file-list>
-		<welcome-file>CalcViewDataReaderServlet</welcome-file>
+		<welcome-file>ScriptViewDemoServlet</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<description></description>
-		<display-name>CalcViewDataReaderServlet</display-name>
-		<servlet-name>CalcViewDataReaderServlet</servlet-name>
+		<display-name>ScriptViewDemoServlet</display-name>
+		<servlet-name>ScriptViewDemoServlet</servlet-name>
 		<servlet-class>com.sap.hana.cloud.samples.scriptview.ScriptViewDemoServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>CalcViewDataReaderServlet</servlet-name>
-		<url-pattern>/CalcViewDataReaderServlet</url-pattern>
+		<servlet-name>ScriptViewDemoServlet</servlet-name>
+		<url-pattern>/ScriptViewDemoServlet</url-pattern>
 	</servlet-mapping>
 
 	<resource-ref>
