@@ -24,7 +24,8 @@ Application startup
 
 You can run "HANA Scripted View Demo" application only on the Cloud.
 
-Running on the Cloud
+Running on the SAP HANA Cloud
+1. Using Maven
  - go to your computer’s properties, Advanced System Settings, Environment variables and create a new system variable named “NW_CLOUD_SDK_PATH” and 
  enter the path to the directory where you have the downloaded the SAP HANA Cloud SDK 2.x to.
  - in pom.xml do update <remoteaccess.version> according the one provided by your SAP HANA Cloud SDK 2.x
@@ -32,8 +33,13 @@ Running on the Cloud
  - make sure that "dbaccess-beta.server-x.x.x.jar" is packaged into war file's WEB-INF\lib folder
  - deploy war file to the cloud
  - navigate to ScriptViewDemoServlet URL to get results from scripted view execution
- - import the remote HANA Cloud System into HANA studio 
-
+ - import the remote HANA Cloud System into HANA studio
+  
+2. Using Eclipse
+  - import project from git to Eclipse workspace: https://github.com/SAP/cloud-hana-scriptview-demo.git (consider installing EGit for your comfort)
+  - import in \src\main\webapp\WEB-INF\lib file dbaccess-beta.server-x.x.x.jar (look at your SAP HANA Cloud SDK 2.x/add-ons) 
+  - Ready to deploy on the SAP HANA Cloud: from project's context menu "Run As"->"Run on Server"
+ 
 Versioning
 ----------
 
