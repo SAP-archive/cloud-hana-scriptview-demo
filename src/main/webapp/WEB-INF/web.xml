@@ -23,42 +23,4 @@
 		<res-type>javax.sql.DataSource</res-type>
 	</resource-ref>
 
-	<servlet>
-		<description></description>
-		<display-name>RemotingServlet</display-name>
-		<servlet-name>RemotingServlet</servlet-name>
-		<servlet-class>com.sap.core.jdbc.remoteaccess.server.RemotingServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>RemotingServlet</servlet-name>
-		<url-pattern>/RemotingServlet/*</url-pattern>
-	</servlet-mapping>
-	<!-- This filter protects the Remote Access servlet against cross site request 
-		forgery and must be added for security reasons. The Remote Access servlet 
-		will check the existence of the filter and fail in case it is not registered! -->
-	<filter>
-		<filter-name>RestCSRF</filter-name>
-		<filter-class>com.sap.core.js.csrf.RestCsrfPreventionFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>RestCSRF</filter-name>
-		<servlet-name>RemotingServlet</servlet-name>
-	</filter-mapping>
-	
-	<security-constraint>
-		<web-resource-collection>
-			<web-resource-name>Protected Tunnel</web-resource-name>
-			<url-pattern>/RemotingServlet/*</url-pattern>
-		</web-resource-collection>
-		<auth-constraint>
-			<role-name>jdbc_remote_access_admin</role-name>
-		</auth-constraint>
-	</security-constraint>
-	<login-config>
-		<auth-method>BASIC</auth-method>
-	</login-config>
-	<security-role>
-		<description>Administrators</description>
-		<role-name>jdbc_remote_access_admin</role-name>
-	</security-role>
 </web-app>

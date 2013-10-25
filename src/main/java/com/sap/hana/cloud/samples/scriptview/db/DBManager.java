@@ -14,7 +14,7 @@ import java.util.List;
 
 public class DBManager {
 
-	private static final String SELECT_ALL_MANAGERS_SCRIPTED_VIEW = "SELECT * FROM \"manager/SCRIPTVIEW\"";  
+	private static final String SELECT_ALL_MANAGERS_SCRIPTED_VIEW = "SELECT * FROM \"NEO_<YOUR_SCHEMA_NAME>\".\"manager/SCRIPTVIEW\"";  
 	 
 	private DBUtil dbAccess;
 

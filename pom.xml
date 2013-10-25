@@ -85,23 +85,6 @@
 					<showWarnings>false</showWarnings>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1.1</version>
-				<configuration>
-					<warName>${project.artifactId}</warName>
-					<webResources>
-						<resource>
-							<directory>${env.NW_CLOUD_SDK_PATH}/add-ons/dbaccess</directory>
-							<targetPath>WEB-INF/lib</targetPath>
-							<includes>
-								<include>dbaccess-beta.server-${remoteaccess.version}.jar</include>
-							</includes>
-						</resource>
-					</webResources>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 </project>
