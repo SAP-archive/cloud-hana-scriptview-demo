@@ -37,7 +37,6 @@ Running on the SAP HANA Cloud
   
 2. Using Eclipse
   - import project from git to Eclipse workspace: https://github.com/SAP/cloud-hana-scriptview-demo.git (consider installing EGit for your comfort)
-  - import in \src\main\webapp\WEB-INF\lib file dbaccess-beta.server-x.x.x.jar (look at your SAP HANA Cloud SDK 2.x/add-ons) 
   - Ready to deploy on the SAP HANA Cloud: from project's context menu "Run As"->"Run on Server"
  
 Versioning
